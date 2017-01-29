@@ -1,0 +1,12 @@
+<ion-view view-title="PRINCIPAL BOARD">
+  <ion-content>
+    <div class="list">
+        <a class="item item-thumbnail-left" ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+          <img src="{{playlist.img}}">
+          <h2>{{playlist.title}}</h2>
+          <p>{{playlist.descrip}}</p>
+        </a>
+      ...
+    </div>
+  </ion-content>
+</ion-view>

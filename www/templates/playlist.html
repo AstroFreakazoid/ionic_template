@@ -1,0 +1,44 @@
+<ion-view view-title="DETAILS">
+  <ion-content>
+    <ul class="list">
+      <li class="item item-toggle">
+        ¿Favoritos?
+        <label class="toggle toggle-assertive">
+          <input type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+    </ul>
+
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img src="{{ playlist.img }}">
+        <h2> {{playlist.title}} </h2>
+        <p>November 05, 1955</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="{{ playlist.img }}">
+        <p> {{playlist.descrip}} </p>
+        <p>
+          <a href="#" class="subdued">{{playlist.likes}} Like</a>
+          <a href="#" class="subdued">{{playlist.recommends}} Comments</a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <a class="button icon-right ion-chevron-right button-calm" ng-click="showMap()">Ubicación</a>
+      </div>
+      <div class="col col-25">
+        <a class="button button-icon icon ion-android-share-alt"></a>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
