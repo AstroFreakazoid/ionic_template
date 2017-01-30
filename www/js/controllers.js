@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic','ion-gallery'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -39,6 +39,43 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+
+  $scope.name_2 = "asd";
+
+  $scope.items = [
+    {
+      src:'http://www.wired.com/images_blogs/rawfile/2013/11/offset_WaterHouseMarineImages_62652-2-660x440.jpg',
+      sub: 'This is a <b>subtitle</b>'
+    },
+    {
+      src:'http://www.gettyimages.co.uk/CMS/StaticContent/1391099215267_hero2.jpg',
+      sub: '' /* Not showed */
+    },
+    {
+      src:'http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg',
+      thumb:'http://www.gettyimages.co.uk/CMS/StaticContent/1391099215267_hero2.jpg'
+    },
+    {
+      src:'http://www.wired.com/images_blogs/rawfile/2013/11/offset_WaterHouseMarineImages_62652-2-660x440.jpg',
+      sub: 'This is a <b>subtitle</b>'
+    },
+    {
+      src:'http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg',
+      thumb:'http://www.gettyimages.co.uk/CMS/StaticContent/1391099215267_hero2.jpg'
+    },
+    {
+      src:'http://www.wired.com/images_blogs/rawfile/2013/11/offset_WaterHouseMarineImages_62652-2-660x440.jpg',
+      sub: 'This is a <b>subtitle</b>'
+    },
+    {
+      src:'http://www.gettyimages.co.uk/CMS/StaticContent/1391099215267_hero2.jpg',
+      sub: '' /* Not showed */
+    },
+    {
+      src:'http://www.wired.com/images_blogs/rawfile/2013/11/offset_WaterHouseMarineImages_62652-2-660x440.jpg',
+      sub: 'This is a <b>subtitle</b>'
+    }
+  ]
 })
 
 .controller('PlaylistsCtrl', function($scope, $rootScope) {
@@ -66,20 +103,20 @@ angular.module('starter.controllers', [])
 
   $scope.showMap = function() {
       $scope.data = {}
-    
+
       // Custom popup
       var myPopup = $ionicPopup.show({
          template: ' <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15720.03460911625!2d-84.05653072987651!3d9.933236836350208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3f14d13a1b5%3A0x55def35dd8fbd62d!2sProvincia+de+San+Jos%C3%A9%2C+San+Pedro%2C+Costa+Rica!5e0!3m2!1ses!2ses!4v1485570889063" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> ',
          title: 'Title',
          subTitle: 'Subtitle',
          scope: $scope,
-      
+
          buttons: [
             { text: 'Continuar' }, {
                text: '<a class="icon ion-model-s" />',
                type: '',
                   onTap: function(e) {
-            
+
                      if (!$scope.data.model) {
                         //don't allow the user to close unless he enters model...
                            e.preventDefault();
@@ -93,7 +130,7 @@ angular.module('starter.controllers', [])
 
       myPopup.then(function(res) {
          console.log('Tapped!', res);
-      });    
+      });
    };
 
 });
